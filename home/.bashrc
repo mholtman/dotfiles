@@ -23,6 +23,3 @@ export NVM_DIR="/Users/mholtman/.nvm"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -s "/Users/mholtman/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mholtman/.sdkman/bin/sdkman-init.sh"
-
-alias mount-cas="sshfs mine-all-mine:/home/myh29/git-repos /Volumes/CAS/myh29 -o defer_permissions -o volname=CasMyh29"
-alias unmount-cas="umount /Volumes/CAS/myh29"
