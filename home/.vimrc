@@ -6,6 +6,7 @@ set nu
 set expandtab
 set nobackup
 set noswapfile
+set backspace=indent,eol,start
 autocmd BufWritePre * %s/\s\+$//e
 nnoremap <F5> :CtrlPBuffer<CR>
 
