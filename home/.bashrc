@@ -15,6 +15,8 @@ prepend_to_path() {
 	path_includes "${DIR}" || export PATH=${DIR}:${PATH}
 }
 
+export ANDROID_HOME=${HOME}/Android
+
 append_to_path "${HOME}/bin"
 append_to_path "${HOME}/.rvm/bin"
 
