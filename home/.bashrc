@@ -15,6 +15,10 @@ prepend_to_path() {
 	path_includes "${DIR}" || export PATH=${DIR}:${PATH}
 }
 
+path_remove ()  {
+  export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`;
+}
+
 export ANDROID_HOME=${HOME}/Android
 
 append_to_path "${HOME}/bin"
