@@ -56,6 +56,8 @@ if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 	source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
 
+git config --global alias.pushf "push --force-with-lease"
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "${HOME}/.gvm/bin/gvm-init.sh" ]] && source "${HOME}/.gvm/bin/gvm-init.sh"
 
