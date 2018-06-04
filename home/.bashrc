@@ -19,7 +19,7 @@ path_remove ()  {
   export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`;
 }
 
-export ANDROID_HOME=${HOME}/Android
+export ANDROID_HOME=${HOME}/Library/Android/sdk
 
 append_to_path "${HOME}/bin"
 append_to_path "${HOME}/.rvm/bin"
