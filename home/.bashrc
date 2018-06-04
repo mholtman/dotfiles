@@ -69,6 +69,8 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 prepend_to_path '/usr/local/sbin'
 prepend_to_path '/usr/local/bin'
 
+export IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"
