@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Cobalt2",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange"
+}
