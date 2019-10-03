@@ -20,6 +20,8 @@ path_remove ()  {
   export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`;
 }
 
+source "${HOME}/.homesick/repos/homeshick/homeshick.sh"
+
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 
 append_to_path "${HOME}/bin"
