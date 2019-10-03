@@ -1,4 +1,5 @@
 #!/bin/bash
+export BASH_CONF="bashrc"
 
 path_includes() {
 	local -r DIR=$1
@@ -71,6 +72,7 @@ prepend_to_path '/usr/local/bin'
 
 export IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
 
+prepend_to_path "$HOME/bin"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="${HOME}/.sdkman"

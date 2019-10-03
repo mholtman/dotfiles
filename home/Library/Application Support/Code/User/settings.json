@@ -1,7 +1,20 @@
 {
-    "workbench.colorTheme": "Cobalt2",
+    "workbench.colorTheme": "Abyss",
     "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
     "files.trimTrailingWhitespace": true,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
+    "editor.fontSize": 16,
+    "python.jediEnabled": false,
+    "terminal.explorerKind": "integrated",
+    "terminal.integrated.shellArgs.osx": [],
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "vscode-icons",
+    "ruby.intellisense": "rubyLocate",
+    "ruby.useBundler": true,
+    "ruby.useLanguageServer": true,
+    "ruby.codeCompletion": "rcodetools",
+
 }

@@ -1,0 +1,6 @@
+[alias]
+	pushf = push --force-with-lease
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[user]
+	email = mholtman@gmail.com
+	name = Mark Holtman
