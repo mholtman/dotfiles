@@ -1,0 +1,20 @@
+#!/bin/bash
+
+path_includes() {
+	local -r DIR=$1
+	echo "${PATH}" | grep -Eq "(^|:)${DIR}(:|$)"
+}
+
+append_to_path() {
+	local -r DIR=$1
+	path_includes "${DIR}" || export PATH=${PATH}:${DIR}
+}
+
+prepend_to_path() {
+	local -r DIR=$1
+	path_includes "${DIR}" || export PATH=${DIR}:${PATH}
+}
+
+path_remove ()  {
+  export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`;
+}

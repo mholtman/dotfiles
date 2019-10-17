@@ -1,28 +1,8 @@
 #!/bin/bash
 export BASH_CONF="bashrc"
 
-path_includes() {
-	local -r DIR=$1
-	echo "${PATH}" | grep -Eq "(^|:)${DIR}(:|$)"
-}
-
-append_to_path() {
-	local -r DIR=$1
-	path_includes "${DIR}" || export PATH=${PATH}:${DIR}
-}
-
-prepend_to_path() {
-	local -r DIR=$1
-	path_includes "${DIR}" || export PATH=${DIR}:${PATH}
-}
-
-path_remove ()  {
-  export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`;
-}
-
+source ".common-bash-funcs"
 source "${HOME}/.homesick/repos/homeshick/homeshick.sh"
-
-export ANDROID_HOME=${HOME}/Library/Android/sdk
 
 append_to_path "${HOME}/bin"
 append_to_path "${HOME}/.rvm/bin"
@@ -51,6 +31,7 @@ alias git=hub
 PS1='\[\033[01;33m\]\w\n\[\033[00m\]\$ '
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+[[ -s "${HOME}/beam-bashrc" ]] && source "${HOME}/beam-bashrc"
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -58,8 +39,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 	source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
 fi
-
-git config --global alias.pushf "push --force-with-lease"
 
 #enable shell history in ELixir iex
 export ERL_AFLAGS="-kernel shell_history enabled"
@@ -80,6 +59,6 @@ prepend_to_path "$HOME/bin"
 export SDKMAN_DIR="${HOME}/.sdkman"
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 
-. $HOME/.asdf/asdf.sh
+. /usr/local/opt/asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
