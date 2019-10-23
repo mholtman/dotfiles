@@ -1,7 +1,7 @@
 #!/bin/bash
 export BASH_CONF="bashrc"
 
-source ".common-bash-funcs"
+source "${HOME}/.common-bash-funcs"
 source "${HOME}/.homesick/repos/homeshick/homeshick.sh"
 
 append_to_path "${HOME}/bin"
@@ -38,6 +38,10 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
 	source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
+if [ -f "${HOME}/.git-completion.bash" ]; then
+  . "${HOME}/.git-completion.bash"
 fi
 
 #enable shell history in ELixir iex
