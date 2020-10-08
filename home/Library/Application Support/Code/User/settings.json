@@ -69,5 +69,8 @@
             "value": "#42b883"
         }
     ],
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
 
 }

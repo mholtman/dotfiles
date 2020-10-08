@@ -16,3 +16,8 @@ printf "\nApplications\n" >> my_software.txt
 printf "============\n\n" >> my_software.txt
 ls -1 /Applications >> my_software.txt
 
+if [ -x "$(command -v asdf)" ]; then
+  printf "\nASDF stuff\n" >> my_software.txt
+  printf "==========\n" >> my_software.txt
+  asdf list >> my_software.txt
+fi
