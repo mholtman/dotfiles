@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt-get update && apt-get install vim git curl
+apt-get update && apt-get install vim git curl hub
