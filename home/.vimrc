@@ -49,7 +49,7 @@ set t_Co=256
 set term=screen-256color
 set background=dark
 colorscheme PaperColor
-let g:airline_theme='papercolor'
+let g:airline_theme='luna'
 let g:airline#extensions#tabline#enabled = 1
 let g:ale_linters = {
       \ 'ruby': ['standardrb', 'rubocop'],
