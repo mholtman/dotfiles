@@ -2,7 +2,7 @@
 export BASH_CONF="bashrc"
 
 source "${HOME}/.common-bash-funcs"
-source "${HOME}/.homesick/repos/homeshick/homeshick.sh"
+source "$(brew --prefix)/opt/homeshick/homeshick.sh"
 
 append_to_path "${HOME}/bin"
 append_to_path "${HOME}/.rvm/bin"
@@ -68,3 +68,5 @@ export SDKMAN_DIR="${HOME}/.sdkman"
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(rbenv init - bash)"

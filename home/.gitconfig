@@ -6,3 +6,7 @@
 	name = Mark Holtman
 [merge]
   tool = meld
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
