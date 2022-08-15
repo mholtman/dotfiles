@@ -4,6 +4,7 @@
 [user]
 	email = mholtman@gmail.com
 	name = Mark Holtman
+	signingkey = C021A04F63C3E7B60C3E72BEEE4D061BDD8DFC4A
 [merge]
   tool = meld
 [pull]
