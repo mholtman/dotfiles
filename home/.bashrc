@@ -23,10 +23,8 @@ shopt -s checkwinsize
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-# git to hub alias
-alias git=hub
-
+alias git_prune_local="git fetch -p ; git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d"
+alias most_changed="git log --format=format: --name-only | egrep -v '^$' | sort | uniq -c | sort -r | head -20"
 
 PS1='\[\033[01;33m\]\w\n\[\033[00m\]\$ '
 
